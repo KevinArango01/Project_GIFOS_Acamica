@@ -2,3 +2,118 @@
     padding: 0;
     margin: 0;
 }
+
+@mixin menu-parameters-before-after {
+	position:absolute;
+	display:block;
+	content:" ";
+	width: 100%;
+	box-sizing: border-box;
+	transition: 0.2s;
+}
+
+@mixin parameters-hamburguesa{
+top:50%;
+height:2px;
+border-bottom: 0px;
+}
+
+//--------
+//Mobile
+//--------
+
+.header{
+    .header-container{
+        .logo-container{
+            .logo{
+
+            }
+        }
+        .menu{
+            .menu-option{
+                
+            }
+
+            .menu-option-see-more{
+
+            }
+        }
+    }
+}
+
+.section-search{
+    .section-search-container{
+        .paragraph-container{
+            .paragraph{
+
+            }
+        }
+
+.image-ilustra-container{
+    .image-ilustra{
+
+        }
+    }
+
+    .input-search-container{
+        .input-search{
+
+        }
+     }
+
+    .trending-container{
+        .title-trending{
+
+        }
+
+        .paragraph-trending{
+
+            }
+
+        }     
+    }
+}
+
+.section-trending-gifos{
+    .trending-gifos-container{
+        .title-gifos-container{
+            .title-gifos{
+
+            }
+            .description-gifos{
+
+            }
+        }
+
+        .carousel{
+            .carousel-button{
+
+            }
+
+            .carousel-image-container{
+                .carousel-image{
+
+                }
+
+            }
+        }
+    }
+}
+
+.footer{
+    .footer-container{
+        .text-share{
+
+        }
+        .icons-social-network-container{
+            .icon-container{
+
+            }
+        }
+        .copyright-container{
+            .copyright{
+
+            }
+        }
+    }
+}
