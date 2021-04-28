@@ -29,7 +29,7 @@ async function addTrendingSearchTerms() {
           sectionResults.scrollIntoView({ behavior: "smooth" });
         });
         paragraph.appendChild(linkTerm);
-        if (index !== 4) paragraph.append(", ");
+        if (index !== 4) paragraph.append(',');
       }
     });
   } catch (error) {

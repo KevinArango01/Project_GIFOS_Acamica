@@ -11,7 +11,7 @@
   
     #section-searcher {
       .search-container {
-        border: 1px solid #ffffff;
+        border: 1px solid #000000;
       }
   
       .input-container {
@@ -19,7 +19,7 @@
           &,
           &::placeholder,
           &:focus {
-            color: #ffffff;
+            color: #000000;
           }
         }
   
@@ -47,9 +47,6 @@
       .slider-trending-content {
         div.slider-arrow-right {
           background: url("../images/button-slider-right-md-noct.svg") no-repeat;
-          &:hover {
-            //background: url("../../img/Button-Slider-right-hover.svg") no-repeat; // TODO - change white
-          }
         }
   
         div.slider-arrow-left {

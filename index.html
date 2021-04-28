@@ -42,13 +42,12 @@
             </div>
         </nav>
     </header>
-    <main>
-        <section class="principal">
-            <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
-       
-          <!--  <img src="./images/ilustra_header.svg" alt="Banner-principal-GIFOS" class="logo" /> -->
-              <!-- Section Searcher -->
-        <section id="section-searcher">
+
+<main>
+    <section class="principal">
+        <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
+
+        <section id="section-searcher" class="section-searcher">
             <img
             id="img-header"
             class="logo"
@@ -64,55 +63,67 @@
                 placeholder="Busca GIFOS y más"
                 />
                 <div id="icon-search" class="icon-search"></div>
-                <!--<button id="btn-buscar"><img src="images/icon-search.svg" class="input_img" id="lupa-busqueda"
-                    alt="icono-busqueda"></button>  -->
             </div>
-            <span id="line-input-bottom"></span>
+            <span id="line-input-bottom" class="line-input-bottom"></span>
             <ul id="suggested-container" class="suggested-container"></ul>
             </div>
-        </section>
-              <!-- Section Trending Searched Words -->
-        <section id="section-trending-terms">
-            <h3>Trending:</h3>
-            <p id="trending-terms"></p>
-        </section>
-              <!-- Section Results -->
-        <section id="section-results" class="hidden">
-            <span></span>
-            <h2 id="heading-gifos-result"></h2>
-            <div id="container-gifos-result" class="images-container"></div>
-            <button id="btn-vermas" class="">VER MAS</button>
-          </section>
-        <section class="trending">
-            <h2>Trending GIFOS</h2>
-            <p>Mira los últimos GIFOS de nuestra comunidad.</p>
-            <button class="contenedor-trending-button anterior" id="btn-anterior"><</button>
-            <button class="contenedor-trending-button siguiente" id="btn-siguiente">></button>
-            <div id="contenedor-trending" class="contenedor-trending">
-                <div id="contenedor-cards" class="contenedor-cards">
-                </div>
-            </div>
-        </section>
-        <section id="gif-max" class="maximizado hidden">
-        </section>
     </section>
-    </main>
-    <footer class="d-footer">
-        <p>Compartir en:</p>
-        <div class="container-icons">
-            <a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook"></i></a>
-            <a target="_blank" href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
-            <a target="_blank" href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+    
+
+
+    <!-- Section Trending Searched Words -->
+    <section id="section-trending-terms" class="section-trending-terms">
+        <h3>Trending:</h3>
+        <div id="trending-terms" class="trending-terms"></div>
+    </section>
+
+
+
+    <!-- Section Results -->
+    <section id="section-results" class="hidden">
+        <span></span>
+        <h2 id="heading-gifos-result"></h2>
+        <div id="container-gifos-result" class="images-container"></div>
+        <button id="btn-vermas" class="">VER MAS</button>
+    </section>
+
+
+
+    <section class="trending">
+        <h2>Trending GIFOS</h2>
+        <p>Mira los últimos</p>
+        <p>GIFOS de nuestra comunidad.</p>
+        <button class="contenedor-trending-button anterior" id="btn-anterior"><</button>
+        <button class="contenedor-trending-button siguiente" id="btn-siguiente">></button>
+        <div id="contenedor-trending" class="contenedor-trending">
+            <div id="contenedor-cards" class="contenedor-cards"></div>
         </div>
-        <h6>© GIFOS 2020 All Rights Reserved.</h6>
-        <div class="linea"></div>
-    </footer>
+    </section>
+
+
+
+    <section id="gif-max" class="maximizado hidden">
+    </section>
+
+    </section>
+
+</main>
+
+<footer class="d-footer">
+    <p>Compartir en:</p>
+    <div class="container-icons">
+        <a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a target="_blank" href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+    </div>
+    <h6>© GIFOS 2020 All Rights Reserved.</h6>
+    <div class="linea"></div>
+</footer>
+
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <script src="./script/app.js"></script>
     <script src="./script/index.js"></script>
-    
     <script src="./script/helper.js"></script>
- 
     <script src="./script/card.js"></script>
     <script src="./script/search.js"></script>
    

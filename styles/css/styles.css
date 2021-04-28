@@ -69,7 +69,6 @@ body {
 .topnav-container a {
   display: block;
   text-decoration: none;
-  /*@include monserrat-bold;*/
   font-size: 15px;
   color: #ffffff;
   text-align: center;
@@ -86,7 +85,7 @@ body {
   color: #5ed7c6;
 }
 
-#section-searcher {
+.section-searcher {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -94,21 +93,21 @@ body {
   margin: 0 auto;
   margin-bottom: 2rem;
 }
-#section-searcher img.img-header {
+.section-searcher .logo {
   padding: 31px 51px 0px 51px;
   width: 100%;
 }
-#section-searcher .search-container {
+.section-searcher .search-container {
   border: 1px solid #572ee5;
   border-radius: 27px;
   margin: 0 20px;
   max-height: 200px;
 }
-#section-searcher .search-container .input-container {
+.section-searcher .search-container .input-container {
   display: flex;
   align-items: center;
 }
-#section-searcher .search-container .input-container input {
+.section-searcher .search-container .input-container input {
   margin: 0;
   padding: 0;
   height: 50px;
@@ -117,38 +116,39 @@ body {
   background-color: transparent;
   margin-left: 55px;
 }
-#section-searcher .search-container .input-container input, #section-searcher .search-container .input-container input::placeholder, #section-searcher .search-container .input-container input:focus {
+.section-searcher .search-container .input-container input, .section-searcher .search-container .input-container input::placeholder, .section-searcher .search-container .input-container input:focus {
   font-size: 1rem;
   color: black;
   font-family: "Roboto", sans-serif;
 }
-#section-searcher .search-container .input-container input::placeholder {
+.section-searcher .search-container .input-container input::placeholder {
   color: #9cafc3;
 }
-#section-searcher .search-container .input-container input:focus {
+.section-searcher .search-container .input-container input:focus {
   outline: none;
 }
-#section-searcher .search-container .input-container input::before {
-  content: url("./images/icon-search-grey.svg");
+.section-searcher .search-container .input-container input::before {
+  content: url("../../images/icon-search-gris.svg");
   display: inline-block;
 }
-#section-searcher .search-container .input-container div.icon-search {
-  /*@include div-icon(20px);*/
-  width: 25px;
-  margin-right: 20px;
-  background: url("./images/icon-search.svg") no-repeat;
+.section-searcher .search-container .input-container .icon-search {
+  position: relative;
+  right: 15px;
+  width: 30px;
+  height: 25px;
+  background: url("../../images/icon-search.svg") no-repeat;
 }
-#section-searcher .search-container .input-container div.icon-search.search {
-  background: url("./images/close.svg") no-repeat;
+.section-searcher .search-container .input-container .icon-search.search {
+  background: url("../../images/close.svg") no-repeat;
   height: 15px;
 }
-#section-searcher .search-container > span {
+.section-searcher .search-container > span {
   display: none;
   border-bottom: 1px solid #9cafc3;
   margin: 0 23px;
   opacity: 0.5;
 }
-#section-searcher .search-container > ul {
+.section-searcher .search-container > ul {
   display: none;
   color: #9cafc3;
   margin-block-start: 0;
@@ -158,7 +158,7 @@ body {
   overflow-y: scroll;
   height: 122px;
 }
-#section-searcher .search-container > ul li {
+.section-searcher .search-container > ul li {
   display: flex;
   align-items: center;
   padding: 5px 0;
@@ -166,8 +166,8 @@ body {
   opacity: 0.5;
   cursor: pointer;
 }
-#section-searcher .search-container > ul li::before {
-  content: url("../images/icon-search-grey.svg");
+.section-searcher .search-container > ul li::before {
+  content: url("../../images/icon-search-gris.svg");
   display: inline-block;
   width: 1.1875rem;
   margin-right: 0.9125rem;
@@ -178,7 +178,6 @@ body {
 ***********************/
 #section-trending-terms {
   text-align: center;
-  padding-top: 31px;
   padding-bottom: 35px;
   margin: 0 10%;
 }
@@ -186,7 +185,6 @@ body {
   font-size: 1rem;
 }
 #section-trending-terms span {
-  /* @include monserrat-medium;*/
   font-size: 1rem;
   text-align: center;
   line-height: 25px;
@@ -232,7 +230,6 @@ body {
 #section-favorites > div.images-container p.no-result-text,
 #section-mygifos > div.images-container p.no-result-text {
   flex-basis: 100%;
-  /*@include monserrat-bold;*/
   font-size: 22px;
   color: #50e3c2;
   text-align: center;
@@ -272,26 +269,26 @@ body {
 /**********************
 /* Section Trending
 ***********************/
-#section-trending-gifos {
+.section-trending {
   background-color: #f3f5f8;
   padding: 46px 0px 82px 0px;
   text-align: center;
 }
-#section-trending-gifos h2,
-#section-trending-gifos > p {
+.section-trending h2,
+.section-trending > p {
   margin: 0 22px;
   color: black;
   margin-bottom: 32px;
 }
-#section-trending-gifos .slider-trending-content div.container-trending {
+.section-trending .slider-trending-content div.container-trending {
   overflow: hidden;
   overflow-x: auto;
   display: flex;
 }
-#section-trending-gifos .slider-trending-content div.container-trending div.img-container {
+.section-trending .slider-trending-content div.container-trending div.img-container {
   margin: 0 11px;
 }
-#section-trending-gifos .slider-trending-content div.container-trending div.img-container > img {
+.section-trending .slider-trending-content div.container-trending div.img-container > img {
   height: 187px;
   width: 243px;
 }
@@ -330,7 +327,6 @@ button.btn-primary-ghost {
   border-radius: 27px;
   background-color: transparent;
   font-size: 0.8125rem;
-  /*@include monserrat-bold;*/
   color: #572ee5;
   cursor: pointer;
 }
@@ -378,8 +374,6 @@ div.slider-arrow-right {
   flex-basis: 100%;
 }
 .pagination-container div {
-  /*@include roboto-medium;
-  @include div-icon(32px);*/
   font-size: 18px;
   color: #9cafc3;
   display: flex;
@@ -483,10 +477,10 @@ div.icon-expand:hover {
 
 header {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--background_general);
+  background-color: var(--blanco);
   width: 100%;
   position: fixed;
-  z-index: 3000;
+  z-index: 2;
 }
 header .linea {
   height: 5px;
@@ -630,7 +624,7 @@ header nav .menu .layer {
     left: 180px;
   }
   header nav .menu ul {
-    background-color: var(--menudestokp);
+    background-color: var(--blanco);
     top: 5px;
     flex-direction: row;
     height: 90px;
@@ -706,13 +700,9 @@ header nav .menu .layer {
 }
 
 .principal {
-  background-color: var(--background_general);
+  background-color: var(--blanco);
   padding-top: 100px;
   text-align: center;
-  /*img {
-    width: 273px;
-    height: 130px;
-  }*/
 }
 .principal h1 {
   margin: 2px 44px 27px 45px;
@@ -727,7 +717,10 @@ header nav .menu .layer {
 .principal h1 .gifos {
   color: var(--turquesa);
 }
-.principal article h3 {
+.principal .section-trending-terms {
+  padding-top: 0px;
+}
+.principal .section-trending-terms h3 {
   letter-spacing: 0;
   font-family: "Montserrat", sans-serif;
   color: var(--purpura);
@@ -736,7 +729,20 @@ header nav .menu .layer {
   line-height: 25px;
   margin: 31px 0 2px 0;
 }
-.principal article ul {
+.principal .section-trending-terms div {
+  letter-spacing: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--purpura);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  padding: 0 60px 35px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.principal .section-trending-terms ul {
   letter-spacing: 0;
   font-family: "Montserrat", sans-serif;
   color: var(--purpura);
@@ -749,7 +755,7 @@ header nav .menu .layer {
   justify-content: center;
   flex-wrap: wrap;
 }
-.principal article ul li {
+.principal .section-trending-terms ul li {
   list-style: none;
   text-transform: capitalize;
   padding: 0.5em;
@@ -836,23 +842,17 @@ header nav .menu .layer {
 }
 
 @media (min-width: 769px) {
-  .principal {
-    /* img {
-       width: 399px;
-       height: 190px;
-     }*/
-  }
   .principal h1 {
     margin: 76px 440px 24px 440px;
     display: inline-block;
     font-size: 35px;
     line-height: 50px;
   }
-  .principal article h3 {
+  .principal #section-trending-terms h3 {
     font-size: 18px;
     margin: 73px 0 7px 0;
   }
-  .principal article p {
+  .principal #section-trending-terms div {
     font-size: 16px;
     padding-bottom: 95px;
   }
@@ -860,7 +860,6 @@ header nav .menu .layer {
     width: 38.3%;
   }
 
-  /***** Create Page *****/
   .footer-create .create-steps h3 {
     display: none;
     position: relative;
@@ -907,13 +906,13 @@ header nav .menu .layer {
 }
 
 .d-footer {
-  background-color: var(--background_general);
+  background-color: var(--blanco);
   text-align: center;
   letter-spacing: 0;
   font-family: "Roboto", sans-serif;
   color: var(--negro);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 20px;
 }
 .d-footer p {
@@ -925,6 +924,12 @@ header nav .menu .layer {
   font-size: 14px;
   margin-top: 47.8px;
   margin-bottom: 23px;
+  letter-spacing: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--negro);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
 .d-footer .container-icons i {
   color: var(--gris);
@@ -1230,10 +1235,10 @@ header nav .menu .layer {
   background-color: #000000;
 }
 .dark #section-searcher .search-container {
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
 }
 .dark #section-searcher .input-container input, .dark #section-searcher .input-container input::placeholder, .dark #section-searcher .input-container input:focus {
-  color: #ffffff;
+  color: #000000;
 }
 .dark #section-searcher .input-container div.icon-search {
   background: url("../images/icon-search-mod-noc.svg") no-repeat;
@@ -1780,13 +1785,13 @@ header nav .menu .layer {
   font-size: 16px;
   font-weight: 500;
   line-height: 23px;
-  padding: 9px 100px;
 }
 .trending .contenedor-trending {
   height: 187px;
   background: none;
   position: relative;
   overflow: hidden;
+  margin-top: 32px;
 }
 .trending .contenedor-trending .contenedor-cards {
   display: inline-flex;

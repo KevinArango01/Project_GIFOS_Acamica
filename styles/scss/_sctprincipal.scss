@@ -1,27 +1,33 @@
 @import "variables";
 
-.principal {
-  background-color: var(--background_general);
+.principal{
+  background-color: var(--blanco);
   padding-top: 100px;
   text-align: center;
-  h1 {
+  h1{
     margin: 2px 44px 27px 45px;
     @include letra(0, $font-montserrat, var(--purpura), 30px, 700, 36px);
     text-align: center;
-    .gifos {
+    .gifos{
       color: var(--turquesa);
     }
   }
-  /*img {
-    width: 273px;
-    height: 130px;
-  }*/
-  article {
-    h3 {
+
+  .section-trending-terms{
+    padding-top: 0px;
+    h3{
       @include letra(0, $font-montserrat, var(--purpura), 16px, 700, 25px);
       margin: 31px 0 2px 0;
     }
-    ul {
+    div{
+      @include letra(0, $font-montserrat, var(--purpura), 14px, 500, 25px);
+      padding: 0 60px 35px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    ul{
       @include letra(0, $font-montserrat, var(--purpura), 14px, 500, 25px);
       padding: 0 75px 35px 75px;
       margin: 0;
@@ -120,16 +126,12 @@
       font-size: 35px;
       line-height: 50px;
     }
-   /* img {
-      width: 399px;
-      height: 190px;
-    }*/
-    article {
+    #section-trending-terms{
       h3 {
         font-size: 18px;
         margin: 73px 0 7px 0;
       }
-      p {
+      div {
         font-size: 16px;
         padding-bottom: 95px;
       }
@@ -138,7 +140,6 @@
       width: 38.3%;
     }
   }
-    /***** Create Page *****/
     .footer-create {
       .create-steps {
         h3 {

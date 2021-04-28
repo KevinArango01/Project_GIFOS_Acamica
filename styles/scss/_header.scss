@@ -1,10 +1,10 @@
 @import "variables";
 header {
   font-family: $font-montserrat;
-  background-color: var(--background_general);
+  background-color: var(--blanco);
   width: 100%;
   position: fixed;
-  z-index: 3000;
+  z-index: 2;
   .linea {
     height: 5px;
     background-color: var(--barramenu);
@@ -151,14 +151,12 @@ header {
       }
       .menu {
         ul {
-          background-color: var(--menudestokp);
+          background-color: var(--blanco);
           top: 5px;
           flex-direction: row;
           height: 90px;
           width: 60%;
           justify-content: flex-end;
-          .menudesplegado {
-          }
           li {
             font-size: 13px;
             a {

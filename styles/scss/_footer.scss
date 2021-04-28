@@ -1,8 +1,8 @@
 @import "variables";
 .d-footer {
-  background-color: var(--background_general);
+  background-color: var(--blanco);
   text-align: center;
-  @include letra(0,$font-roboto,var(--negro),16px,500,20px);
+  @include letra(0,$font-roboto,var(--negro),16px,400,20px);
   p {
     padding-top: 47px;
     margin-bottom: 24px;
@@ -12,6 +12,7 @@
     font-size: 14px;
     margin-top: 47.8px;
     margin-bottom: 23px;
+    @include letra(0,$font-roboto,var(--negro),16px,400,20px);
   }
   .container-icons {
     i {
@@ -50,10 +51,6 @@
         margin-left: 0;
         margin-right: 19px;
       }
-      i:hover {
-      }
-    }
-    .linea {
     }
   }
 }

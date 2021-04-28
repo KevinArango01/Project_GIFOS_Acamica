@@ -15,13 +15,13 @@
   }
   p {
     @include letra(0, $font-roboto, var(--negro), 16px, 500, 23px);
-    padding: 9px 100px;
   }
   .contenedor-trending {
     height: 187px;
     background: none;
     position: relative;
     overflow: hidden;
+    margin-top: 32px;
 
     .contenedor-cards {
       display: inline-flex;
