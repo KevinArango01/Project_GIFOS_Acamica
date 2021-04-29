@@ -21,7 +21,7 @@
     }
     div{
       @include letra(0, $font-montserrat, var(--purpura), 14px, 500, 25px);
-      padding: 0 60px 35px;
+      padding: 0 60px 0;
       margin: 0;
       display: flex;
       justify-content: center;
@@ -121,7 +121,7 @@
 @media (min-width: 769px) {
   .principal {
     h1 {
-      margin: 76px 440px 24px 440px;
+      margin: 76px 300px 24px 300px;
       display: inline-block;
       font-size: 35px;
       line-height: 50px;

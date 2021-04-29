@@ -25,12 +25,11 @@
       color: var(--purpura);
     }
   }
-  .linea {
-    height: 5px;
-    background-color: var(--barramenu);
-  }
 }
-
+.linea {
+  height: 5px;
+  background-color: var(--barramenu);
+}
 @media (min-width: 769px) {
   .d-footer {
     display: flex;
@@ -42,15 +41,17 @@
     }
     h6 {
       margin: 0;
-      margin-left: 50%;
+      margin-left: 30%;
       justify-content: end;
     }
     .container-icons {
       margin-left: 17px;
+      width: 17%;
       i {
         margin-left: 0;
         margin-right: 19px;
       }
     }
+   
   }
 }

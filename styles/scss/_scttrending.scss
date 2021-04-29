@@ -47,12 +47,21 @@
 }
 @media (min-width: 769px) {
   .trending {
+    padding-bottom: 150px;
+    h2{
+
+    @include letra(0, $font-montserrat, var(--purpura), 25px, 700, 30px);
+
+    } 
+
     p {
+      display: inline;
       font-size: 18px;
     }
     .contenedor-trending {
       height: 275px;
       .contenedor-cards {
+        margin-top: 20px;
         .card {
           width: 357px;
           height: 275px;

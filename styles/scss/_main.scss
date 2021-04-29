@@ -1,3 +1,5 @@
+@import "variables";
+
 *,
 *:before,
 *::after {
@@ -225,8 +227,9 @@ body {
 
   > h2 {
     font-size: 25px;
-    margin-top: 7px;
+    margin-top: 43px;
     margin-bottom: 45px;
+    @include letra(0, $font-montserrat, var(--purpura), 25px, 700, 40px);
   }
 
   > div.images-container {
@@ -382,6 +385,12 @@ div.slider-arrow-right {
         }
       }
     }
+}
+
+.section-searcher{
+  .logo{
+    padding: 0 51px 0px 51px;
+  }
 }
 /*********** Pagination ********/
 .pagination-container {

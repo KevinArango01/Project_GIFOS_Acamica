@@ -1,8 +1,10 @@
+const searchContainer = document.getElementById("search-container");
 const inputSearch = document.getElementById("input-search");
 const iconSearch = document.getElementById("icon-search");
 
 const suggestedContainer = document.getElementById("suggested-container");
 const imageHeader = document.getElementById("img-header");
+const titlePrincipal = document.getElementById("tittle-principal");
 
 const sectionTrendingTerms = document.getElementById("section-trending-terms");
 const lineInputBottom = document.getElementById("line-input-bottom");
@@ -88,10 +90,12 @@ async function addGifosResult(term, offset) {
  * Add Suggested words to Searcher
  **********************************/
 inputSearch.addEventListener("input", async (e) => {
-  if (e.target.value.length > 1) {
+  if (e.target.value.length > 0) {
     addClass(iconSearch, "search");
     addClass(imageHeader, "hidden");
+    addClass(titlePrincipal, "hidden");
     addClass(sectionTrendingTerms, "hidden");
+    searchContainer.style.marginTop = "30px";
 
     const suggestedWords = await fetchSuggestedWords(e.target.value);
     if (suggestedWords.data.length) {
@@ -131,6 +135,7 @@ function clearSearch() {
   removeClass(sectionTrendingTerms, "hidden");
   removeClass(imageHeader, "hidden");
   removeClass(iconSearch, "search");
+  searchContainer.style.marginTop = "0px";
 }
 
 inputSearch.addEventListener("keydown", (e) => {
@@ -139,6 +144,8 @@ inputSearch.addEventListener("keydown", (e) => {
       if (inputSearch.value) {
         containerGifosResult.innerHTML = "";
         addGifosResult(inputSearch.value);
+        displayNone(suggestedContainer);
+        displayBlock(sectionTrendingTerms);
         sectionResults.scrollIntoView({ behavior: "smooth" });
       }
       break;
