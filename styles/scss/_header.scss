@@ -88,6 +88,16 @@ header {
           .li-creargifos-img{
             margin-top: 10px;
           }
+          .li-creargifos-img-hover{
+            margin-top: 10px;
+            display: none;
+          }
+          .li-creargifos-img-active{
+            display: none;
+            position: relative;
+            bottom: 53px;
+            right: 1px;
+          }
         }
 
         li:first-child {
@@ -183,9 +193,25 @@ header {
           }
           .liCrearGifos:hover {
             background-color: var(--purpura);
+            
+
+            .li-creargifos-img{
+              display: none;
+            }
+            .li-creargifos-img-hover{
+              display: block;
+              margin-top: -10px;
+            }
+
           }
           .liCrearGifos:active {
-            background-color: var(--linea);
+            .li-creargifos-img-hover:hover{
+              display: none;
+            }
+
+            .li-creargifos-img-active{
+              display: block;
+            }
           }
           li:first-child {
             margin: 0px;

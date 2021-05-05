@@ -32,12 +32,13 @@ async function cargarSugerencias() {
         if (sugerenciasBusqueda.data.length > 0) {
             let items_lista = "";
             for (let i = 0; i < sugerenciasBusqueda.data.length; i++) {
-                let items = `<li><img src="images/icon-search-gris.svg" alt="icon-search"/><p>${sugerenciasBusqueda.data[i].name}</p></li>`;
+                let items = `<li><img src="./images/icon-search-gris.svg" alt="icon-search"/><p>${sugerenciasBusqueda.data[i].name}</p></li>`;
                 items_lista = items_lista + items;
             }
             lista_sugerencias.innerHTML = items_lista;
             lista_sugerencias.classList.remove('hidden');
             lista_sugerencias.classList.add('lista-busqueda');
+            items.classList.add('item-lista');
             lupa_busqueda.classList.add('img-lupa', 'hidden');
             lupa_busqueda.classList.remove('hidden');
             input_busqueda.style.width = '80%';
@@ -138,20 +139,20 @@ async function cargarBusqueda(parametro, offset) {
             div.innerHTML = `<div class="card-opciones">
                                     <div class="opciones-gif">
                                         <button id="btn-favorito" class="opcion-button">
-                                            <img src="images/icon-fav-hover.svg" alt="icono-busqueda">
+                                            <img src="./images/icon-fav-hover.svg" alt="icono-busqueda">
                                         </button>
                                         <button id="btn-descargar" class="opcion-button">
-                                            <img src="images/icon-download.svg" alt="icono-busqueda">
+                                            <img src="./images/icon-download.svg" alt="icono-busqueda">
                                         </button>
                                         <button id="btn-max" class="opcion-button">
-                                            <img src="images/icon-max.svg" alt="icono-busqueda">
+                                            <img src="./images/icon-max.svg" alt="icono-busqueda">
                                         </button>
                                     </div>
                                     <div class="opciones-descripcion">
                                         <p class="descripcion user">${resultadosBusqueda.data[i].username}</p>
                                         <p class="descripcion titulo">${resultadosBusqueda.data[i].title}</p>
                                     </div>
-                                </div>`;
+                             </div>`;
             div.querySelector('#btn-favorito').addEventListener('click', () => {
                 agregarFavoritos(resultadosBusqueda.data[i].id);
             });

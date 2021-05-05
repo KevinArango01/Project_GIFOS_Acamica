@@ -437,9 +437,6 @@ div.hover-img div.icon-container {
   right: 0;
   margin: 10px 5px;
 }
-div.hover-img div.icon-container > div {
-  /*@include div-icon(32px);*/
-}
 div.hover-img div.text-container {
   position: absolute;
   left: 18px;
@@ -454,35 +451,32 @@ div.hover-img div.text-container p:first-child {
   font-size: 0.9375rem;
   margin-bottom: 6px;
 }
-div.hover-img div.text-container p:last-child {
-  /*@include robot-bold;*/
-}
 
 div.icon-fav {
-  background: url("../images/icon-fav.svg") no-repeat;
+  background: url("../../images/icon-favoritos.svg") no-repeat;
 }
 div.icon-fav:hover {
-  background: url("../images/icon-fav-hover.svg") no-repeat;
+  background: url("../../images/icon-fav-hover.svg") no-repeat;
 }
 div.icon-fav.saved {
-  background: url("../images/icon-fav-active.svg") no-repeat;
+  background: url("../../images/icon-fav-active.svg") no-repeat;
   background-position: center;
   background-color: #ffffff;
   border-radius: 6px;
 }
 
 div.icon-download {
-  background: url("../images/icon-download.svg") no-repeat;
+  background: url("../../images/icon-download.svg") no-repeat;
 }
 div.icon-download:hover {
-  background: url("../images/icon-download-hover.svg") no-repeat;
+  background: url("../../images/icon-download-hover.svg") no-repeat;
 }
 
 div.icon-expand {
-  background: url("../images/icon-max-normal.svg") no-repeat;
+  background: url("../../images/icon-max.svg") no-repeat;
 }
 div.icon-expand:hover {
-  background: url("../images/icon-max-hover.svg") no-repeat;
+  background: url("../../images/icon-max-hover.svg") no-repeat;
 }
 
 :root {
@@ -606,6 +600,16 @@ header nav .menu ul .liCrearGifos {
 header nav .menu ul .liCrearGifos .li-creargifos-img {
   margin-top: 10px;
 }
+header nav .menu ul .liCrearGifos .li-creargifos-img-hover {
+  margin-top: 10px;
+  display: none;
+}
+header nav .menu ul .liCrearGifos .li-creargifos-img-active {
+  display: none;
+  position: relative;
+  bottom: 53px;
+  right: 1px;
+}
 header nav .menu ul li:first-child {
   margin-top: 32px;
 }
@@ -694,8 +698,18 @@ header nav .menu .layer {
   header nav .menu ul .liCrearGifos:hover {
     background-color: var(--purpura);
   }
-  header nav .menu ul .liCrearGifos:active {
-    background-color: var(--linea);
+  header nav .menu ul .liCrearGifos:hover .li-creargifos-img {
+    display: none;
+  }
+  header nav .menu ul .liCrearGifos:hover .li-creargifos-img-hover {
+    display: block;
+    margin-top: -10px;
+  }
+  header nav .menu ul .liCrearGifos:active .li-creargifos-img-hover:hover {
+    display: none;
+  }
+  header nav .menu ul .liCrearGifos:active .li-creargifos-img-active {
+    display: block;
   }
   header nav .menu ul li:first-child {
     margin: 0px;
@@ -1008,11 +1022,54 @@ header nav .menu .layer {
     margin-right: 19px;
   }
 }
+:root {
+  --menu: rgba(87, 46, 229, 0.9);
+  --barramenu: #572ee5;
+  --background_trending: #f3f5f8;
+  --purpura: #572ee5;
+  --blanco: white;
+  --turquesa: #50e3c2;
+  --gris: #cdd6e0;
+  --negro: #000000;
+  --background_general: #e7e5e5;
+  --linea: #85a4c5;
+  --menudestokp: rgb(235, 230, 230);
+  --botones: white;
+}
+
+[data-theme=dark] {
+  --menudestokp: #2c2d2e;
+  --menu: #000000;
+  --barramenu: #000000;
+  --background_trending: #222326;
+  --purpura: #ffffff;
+  --gris: white;
+  --negro: white;
+  --background_general: #37383c;
+  --botones: black;
+}
+
 /*********************
 * Create gifos
 **********************/
 #create-gifo {
   margin: 0 2rem;
+}
+#create-gifo .div-camara {
+  margin-left: 8%;
+  height: 100%;
+  width: 25%;
+  position: relative;
+  top: 220px;
+}
+#create-gifo .div-camara #luz-camara {
+  position: absolute;
+  top: 19px;
+}
+#create-gifo .container-grabacion {
+  height: 100%;
+  max-height: 410px;
+  margin-top: -95px;
 }
 #create-gifo .camera-container {
   border: 1px solid #572ee5;
@@ -1026,10 +1083,23 @@ header nav .menu .layer {
   padding: 20px;
 }
 #create-gifo .camera-container h2 {
-  color: #572ee5;
+  letter-spacing: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #572EE5;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 35px;
+}
+#create-gifo .camera-container .span {
+  color: #50E3C2;
 }
 #create-gifo .camera-container p {
+  letter-spacing: 0;
+  font-family: "Roboto", sans-serif;
   color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
 }
 #create-gifo .camera-container div.div-hover-create {
   position: absolute;
@@ -1052,6 +1122,7 @@ header nav .menu .layer {
 #create-gifo .footer-create {
   display: flex;
   flex-direction: column;
+  margin-top: -10px;
 }
 #create-gifo .footer-create .create-steps {
   display: flex;
@@ -1075,6 +1146,11 @@ header nav .menu .layer {
 #create-gifo .footer-create .create-steps div.step-icon.activate {
   color: white;
   background: #572ee5;
+}
+#create-gifo .footer-create .create-steps img {
+  position: absolute;
+  left: 80%;
+  top: 74%;
 }
 #create-gifo .footer-create span {
   height: 6.9px;

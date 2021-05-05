@@ -142,7 +142,7 @@ inputSearch.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "Enter":
       if (inputSearch.value) {
-        containerGifosResult.innerHTML = "";
+        containerGifosResult.innerHTML = ``;
         addGifosResult(inputSearch.value);
         displayNone(suggestedContainer);
         displayBlock(sectionTrendingTerms);

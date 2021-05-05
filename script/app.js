@@ -107,7 +107,7 @@ trendings_boton.forEach(button => {
 });
 
 /*_____________________GENERALIDADES GIPHY_____________________*/
-const APIkey = "5g6jRUJypS9HTlHyI0k2xQJMA7nSkpz2";
+const APIkey = "w3JmbZQdD4ttrpnH2v9GaK8TDXmvDRvb";
 
 //Función general para los request a la api 
 async function logFetch(url) {
@@ -130,13 +130,13 @@ async function cargarTrending() {
         divtrending.innerHTML = `<div id="${gifsTrending.data[i].id}" class="card-opciones">
                                     <div class="opciones-gif">
                                         <button id="btn-favorito" class="opcion-button">
-                                            <img src="images/icon-fav-hover.svg" alt="icono-favorito">
+                                            <img src="./images/icon-fav-hover.svg" alt="icono-favorito">
                                         </button>
                                         <button id="btn-descargar" class="opcion-button">
-                                            <img src="images/icon-download.svg" alt="icono-descarga">
+                                            <img src="./images/icon-download.svg" alt="icono-descarga">
                                         </button>
                                         <button id="btn-max" class="opcion-button">
-                                            <img src="images/icon-max.svg" alt="icono-maximizar">
+                                            <img src="./images/icon-max.svg" alt="icono-maximizar">
                                         </button>
                                     </div>
                                     <div class="opciones-descripcion">
@@ -186,7 +186,7 @@ async function maximizarGif(idGif) {
         contenedor_maximizado.style.display = 'flex';
         contenedor_maximizado.innerHTML =
             `<button id="btnmax-close" class="close-button">
-                    <img src="images/close.svg" alt="icono-busqueda">
+                    <img src="./images/close.svg" alt="icono-busqueda">
              </button>
              <img srcset="${gifInfo.data.images.downsized_large.url}"
                     alt="${gifInfo.data.id}" id="img-maximizado" class="gif-maximizado">
@@ -197,10 +197,10 @@ async function maximizarGif(idGif) {
                    </div>
                    <div class="maximizado-opciones">
                        <button id="btnmax-favorito">
-                           <img src="images/icon-fav-hover.svg" alt="icono-busqueda">
+                           <img src="./images/icon-fav-hover.svg" alt="icono-busqueda">
                        </button>
                        <button id="btnmax-descarga">
-                           <img src="images/icon-download.svg" alt="icono-busqueda">
+                           <img src="./images/icon-download.svg" alt="icono-busqueda">
                        </button>
                    </div>
              </article>`;

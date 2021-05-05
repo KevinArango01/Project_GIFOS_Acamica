@@ -12,9 +12,6 @@ div.hover-img {
       position: absolute;
       right: 0;
       margin: 10px 5px;
-      > div {
-        /*@include div-icon(32px);*/
-      }
     }
   
     div.text-container {
@@ -29,20 +26,17 @@ div.hover-img {
           font-size: 0.9375rem;
           margin-bottom: 6px;
         }
-        &:last-child {
-          /*@include robot-bold;*/
-        }
       }
     }
   }
   
   div.icon-fav {
-    background: url("../images/icon-fav.svg") no-repeat;
+    background: url("../../images/icon-favoritos.svg") no-repeat;
     &:hover {
-      background: url("../images/icon-fav-hover.svg") no-repeat;
+      background: url("../../images/icon-fav-hover.svg") no-repeat;
     }
     &.saved {
-      background: url("../images/icon-fav-active.svg") no-repeat;
+      background: url("../../images/icon-fav-active.svg") no-repeat;
       background-position: center;
       background-color: #ffffff;
       border-radius: 6px;
@@ -50,16 +44,16 @@ div.hover-img {
   }
   
   div.icon-download {
-    background: url("../images/icon-download.svg") no-repeat;
+    background: url("../../images/icon-download.svg") no-repeat;
     &:hover {
-      background: url("../images/icon-download-hover.svg") no-repeat;
+      background: url("../../images/icon-download-hover.svg") no-repeat;
     }
   }
   
   div.icon-expand {
-    background: url("../images/icon-max-normal.svg") no-repeat;
+    background: url("../../images/icon-max.svg") no-repeat;
     &:hover {
-      background: url("../images/icon-max-hover.svg") no-repeat;
+      background: url("../../images/icon-max-hover.svg") no-repeat;
     }
   }
   

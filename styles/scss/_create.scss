@@ -1,9 +1,30 @@
+@import "variables";
+
 /*********************
 * Create gifos
 **********************/
 
 #create-gifo {
     margin: 0 2rem;
+    .div-camara{
+      margin-left: 8%;
+      height: 100%;
+      width: 25%;
+      position: relative;
+      top: 220px;
+
+      #luz-camara{
+        position: absolute;
+        top: 19px;
+      }
+    }
+
+    .container-grabacion{
+      height: 100%;
+      max-height: 410px;
+      margin-top: -95px;
+    }
+
     .camera-container {
       border: 1px solid #572ee5;
       max-width: 688px;
@@ -16,11 +37,16 @@
       padding: 20px;
   
       h2 {
-        color: #572ee5;
+        @include letra(0, $font-montserrat ,#572EE5, 25px, 700, 35px)
+
       }
+
+      .span{
+        color: #50E3C2;
+     }
   
       p {
-        color: #000000;
+        @include letra(0, $font-roboto , #000000, 16px, 400, 29px)
       }
   
       div.div-hover-create {
@@ -48,6 +74,7 @@
     .footer-create {
       display: flex;
       flex-direction: column;
+      margin-top: -10px;
       .create-steps {
         display: flex;
         justify-content: center;
@@ -70,6 +97,11 @@
             color: white;
             background: #572ee5;
           }
+        }
+        img{
+          position: absolute;
+          left: 80%;
+          top: 74%;
         }
       }
   
