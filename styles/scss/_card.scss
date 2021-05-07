@@ -5,7 +5,7 @@
 div.hover-img {
     display: block;
     position: absolute;
-    background-color: #572ee5;
+    background-color: var(--purpura);
     opacity: 0.8;
   
     div.icon-container {
@@ -21,7 +21,7 @@ div.hover-img {
       text-align: left;
       p {
         margin: 0;
-        color: white;
+        color: var(--blanco);
         &:first-child {
           font-size: 0.9375rem;
           margin-bottom: 6px;
@@ -38,7 +38,7 @@ div.hover-img {
     &.saved {
       background: url("../../images/icon-fav-active.svg") no-repeat;
       background-position: center;
-      background-color: #ffffff;
+      background-color: var(--blanco);
       border-radius: 6px;
     }
   }

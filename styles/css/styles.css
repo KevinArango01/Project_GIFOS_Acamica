@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -36,8 +36,9 @@
   --purpura: #ffffff;
   --gris: white;
   --negro: white;
-  --background_general: #37383c;
+  --background_general: #222326;
   --botones: black;
+  --blanco: #37383C;
 }
 
 *,
@@ -244,8 +245,8 @@ body {
 #section-favorites > h2,
 #section-mygifos > h2 {
   font-size: 25px;
-  margin-top: 43px;
-  margin-bottom: 45px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   letter-spacing: 0;
   font-family: "Montserrat", sans-serif;
   color: var(--purpura);
@@ -286,6 +287,7 @@ body {
 .images-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0 11.5px;
 }
 .images-container div.img-container {
@@ -381,6 +383,10 @@ div.slider-arrow-right {
   display: none;
 }
 
+.show {
+  display: block;
+}
+
 /*  images*/
 @media screen and (min-width: 768px) {
   .images-container {
@@ -429,7 +435,7 @@ div.slider-arrow-right {
 div.hover-img {
   display: block;
   position: absolute;
-  background-color: #572ee5;
+  background-color: var(--purpura);
   opacity: 0.8;
 }
 div.hover-img div.icon-container {
@@ -445,7 +451,7 @@ div.hover-img div.text-container {
 }
 div.hover-img div.text-container p {
   margin: 0;
-  color: white;
+  color: var(--blanco);
 }
 div.hover-img div.text-container p:first-child {
   font-size: 0.9375rem;
@@ -461,7 +467,7 @@ div.icon-fav:hover {
 div.icon-fav.saved {
   background: url("../../images/icon-fav-active.svg") no-repeat;
   background-position: center;
-  background-color: #ffffff;
+  background-color: var(--blanco);
   border-radius: 6px;
 }
 
@@ -502,8 +508,9 @@ div.icon-expand:hover {
   --purpura: #ffffff;
   --gris: white;
   --negro: white;
-  --background_general: #37383c;
+  --background_general: #222326;
   --botones: black;
+  --blanco: #37383C;
 }
 
 header {
@@ -747,8 +754,9 @@ header nav .menu .layer {
   --purpura: #ffffff;
   --gris: white;
   --negro: white;
-  --background_general: #37383c;
+  --background_general: #222326;
   --botones: black;
+  --blanco: #37383C;
 }
 
 .principal {
@@ -953,8 +961,9 @@ header nav .menu .layer {
   --purpura: #ffffff;
   --gris: white;
   --negro: white;
-  --background_general: #37383c;
+  --background_general: #222326;
   --botones: black;
+  --blanco: #37383C;
 }
 
 .d-footer {
@@ -971,11 +980,16 @@ header nav .menu .layer {
   padding-top: 47px;
   margin-bottom: 24px;
   font-size: 15px;
+  letter-spacing: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--negro);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 0;
 }
 .d-footer h6 {
   font-size: 14px;
   margin-top: 47.8px;
-  margin-bottom: 23px;
   letter-spacing: 0;
   font-family: "Roboto", sans-serif;
   color: var(--negro);
@@ -1011,6 +1025,7 @@ header nav .menu .layer {
   .d-footer h6 {
     margin: 0;
     margin-left: 30%;
+    margin-bottom: 23px;
     justify-content: end;
   }
   .d-footer .container-icons {
@@ -1045,8 +1060,9 @@ header nav .menu .layer {
   --purpura: #ffffff;
   --gris: white;
   --negro: white;
-  --background_general: #37383c;
+  --background_general: #222326;
   --botones: black;
+  --blanco: #37383C;
 }
 
 /*********************
@@ -1072,7 +1088,7 @@ header nav .menu .layer {
   margin-top: -95px;
 }
 #create-gifo .camera-container {
-  border: 1px solid #572ee5;
+  border: 1px solid var(--purpura);
   max-width: 688px;
   height: 390px;
   margin: 24px auto;
@@ -1085,7 +1101,7 @@ header nav .menu .layer {
 #create-gifo .camera-container h2 {
   letter-spacing: 0;
   font-family: "Montserrat", sans-serif;
-  color: #572EE5;
+  color: var(--purpura);
   font-size: 25px;
   font-weight: 700;
   line-height: 35px;
@@ -1096,14 +1112,14 @@ header nav .menu .layer {
 #create-gifo .camera-container p {
   letter-spacing: 0;
   font-family: "Roboto", sans-serif;
-  color: #000000;
+  color: var(--negro);
   font-size: 16px;
   font-weight: 400;
   line-height: 29px;
 }
 #create-gifo .camera-container div.div-hover-create {
   position: absolute;
-  background-color: #572ee5;
+  background-color: var(--purpura);
   opacity: 0.8;
   z-index: 1;
   display: flex;
@@ -1136,16 +1152,16 @@ header nav .menu .layer {
   width: 32px;
   height: 32px;
   border-radius: 32px;
-  border: 1px solid #572ee5;
+  border: 1px solid var(--purpura);
   background: transparent;
-  color: #572ee5;
+  color: var(--purpura);
   margin: 0 13px;
   text-align: center;
   font-size: 18px;
 }
 #create-gifo .footer-create .create-steps div.step-icon.activate {
   color: white;
-  background: #572ee5;
+  background: var(--purpura);
 }
 #create-gifo .footer-create .create-steps img {
   position: absolute;
@@ -1157,9 +1173,9 @@ header nav .menu .layer {
   max-width: 795px;
   width: 100%;
   margin: 20px auto;
-  border: 1px solid #572ee5;
+  border: 1px solid var(--purpura);
   border-radius: 6.9px;
-  background-color: #572ee5;
+  background-color: var(--purpura);
 }
 #create-gifo .footer-create button {
   margin: 0 auto;
@@ -1441,8 +1457,9 @@ header nav .menu .layer {
   --purpura: #ffffff;
   --gris: white;
   --negro: white;
-  --background_general: #37383c;
+  --background_general: #222326;
   --botones: black;
+  --blanco: #37383C;
 }
 
 .resultados {
@@ -1523,7 +1540,7 @@ header nav .menu .layer {
 
 .favoritos {
   padding-top: 100px;
-  background-color: var(--background_general);
+  background-color: var(--blanco);
   text-align: center;
 }
 .favoritos h2 {
@@ -1570,7 +1587,7 @@ header nav .menu .layer {
 
 .misgifos {
   padding-top: 100px;
-  background-color: var(--background_general);
+  background-color: var(--blanco);
   text-align: center;
 }
 .misgifos h2 {
@@ -1743,7 +1760,7 @@ header nav .menu .layer {
   }
 
   .favoritos .sin-favoritos img {
-    margin-top: 110px;
+    margin-top: 50px;
     margin-bottom: 24px;
     height: 150px;
     width: 150px;
@@ -1871,8 +1888,9 @@ header nav .menu .layer {
   --purpura: #ffffff;
   --gris: white;
   --negro: white;
-  --background_general: #37383c;
+  --background_general: #222326;
   --botones: black;
+  --blanco: #37383C;
 }
 
 .trending {
@@ -2085,8 +2103,9 @@ header nav .menu .layer {
   --purpura: #ffffff;
   --gris: white;
   --negro: white;
-  --background_general: #37383c;
+  --background_general: #222326;
   --botones: black;
+  --blanco: #37383C;
 }
 
 .creargifos {
@@ -2309,6 +2328,34 @@ header nav .menu .layer {
 .creargifos .div-botones button:hover {
   background-color: var(--purpura);
   color: var(--botones);
+}
+
+:root {
+  --menu: rgba(87, 46, 229, 0.9);
+  --barramenu: #572ee5;
+  --background_trending: #f3f5f8;
+  --purpura: #572ee5;
+  --blanco: white;
+  --turquesa: #50e3c2;
+  --gris: #cdd6e0;
+  --negro: #000000;
+  --background_general: #e7e5e5;
+  --linea: #85a4c5;
+  --menudestokp: rgb(235, 230, 230);
+  --botones: white;
+}
+
+[data-theme=dark] {
+  --menudestokp: #2c2d2e;
+  --menu: #000000;
+  --barramenu: #000000;
+  --background_trending: #222326;
+  --purpura: #ffffff;
+  --gris: white;
+  --negro: white;
+  --background_general: #222326;
+  --botones: black;
+  --blanco: #37383C;
 }
 
 /*# sourceMappingURL=styles.css.map */

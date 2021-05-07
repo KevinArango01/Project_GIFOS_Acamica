@@ -1,10 +1,12 @@
 const searchContainer = document.getElementById("search-container");
 const inputSearch = document.getElementById("input-search");
 const iconSearch = document.getElementById("icon-search");
+const btnVermas = document.getElementById("btn-vermas")
 
 const suggestedContainer = document.getElementById("suggested-container");
 const imageHeader = document.getElementById("img-header");
 const titlePrincipal = document.getElementById("tittle-principal");
+const sectionSearch = document.getElementById("section-searcher");
 
 const sectionTrendingTerms = document.getElementById("section-trending-terms");
 const lineInputBottom = document.getElementById("line-input-bottom");
@@ -48,7 +50,7 @@ async function addGifosResult(term, offset) {
   try {
     const searchedGifos = await fetchSeachGifs(term, offset);
     const headingResult = document.getElementById("heading-gifos-result");
-
+    
     showElement(sectionResults);
     headingResult.textContent = term;
     containerGifosResult.innerHTML = "";
@@ -60,7 +62,6 @@ async function addGifosResult(term, offset) {
       });
 
       const { offset, total_count } = searchedGifos.pagination;
-
       addPagination(
         containerGifosResult,
         12,
@@ -70,6 +71,7 @@ async function addGifosResult(term, offset) {
           addGifosResult(term, pageClicked * 12);
         }
       );
+      
     } else {
       // Not gifs found
       containerGifosResult.innerHTML = `
@@ -92,12 +94,13 @@ async function addGifosResult(term, offset) {
 inputSearch.addEventListener("input", async (e) => {
   if (e.target.value.length > 0) {
     addClass(iconSearch, "search");
-    addClass(imageHeader, "hidden");
-    addClass(titlePrincipal, "hidden");
+    displayNone(imageHeader);
+    displayNone(titlePrincipal);
     addClass(sectionTrendingTerms, "hidden");
-    searchContainer.style.marginTop = "30px";
 
     const suggestedWords = await fetchSuggestedWords(e.target.value);
+
+
     if (suggestedWords.data.length) {
       displayBlock(suggestedContainer);
       displayBlock(lineInputBottom);
@@ -114,6 +117,15 @@ inputSearch.addEventListener("input", async (e) => {
           inputSearch.focus();
           containerGifosResult.innerHTML = "";
           addGifosResult(inputSearch.value);
+          displayNone(suggestedContainer);
+          displayNone(lineInputBottom);
+          displayBlock(sectionTrendingTerms);
+          displayBlock(titlePrincipal);
+          displayBlock(imageHeader);
+          inputSearch.value = "";
+          sectionResults.scrollIntoView({ behavior: "smooth" });
+          clearSearch();
+
         });
       });
 
@@ -146,13 +158,16 @@ inputSearch.addEventListener("keydown", (e) => {
         addGifosResult(inputSearch.value);
         displayNone(suggestedContainer);
         displayBlock(sectionTrendingTerms);
+        displayBlock(titlePrincipal);
+        displayBlock(imageHeader);
+        inputSearch.value = "";
+        clearSearch();
         sectionResults.scrollIntoView({ behavior: "smooth" });
       }
       break;
 
     case "Escape":
       inputSearch.value = "";
-      clearSearch();
       break;
 
     default:

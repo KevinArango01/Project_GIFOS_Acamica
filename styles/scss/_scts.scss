@@ -64,7 +64,7 @@
 
 .favoritos {
   padding-top: 100px;
-  background-color: var(--background_general);
+  background-color: var(--blanco);
   text-align: center;
   h2 {
     text-transform: capitalize;
@@ -103,7 +103,7 @@
 
 .misgifos {
   padding-top: 100px;
-  background-color: var(--background_general);
+  background-color: var(--blanco);
   text-align: center;
   h2 {
     text-transform: capitalize;
@@ -271,7 +271,7 @@
   .favoritos {
     .sin-favoritos {
       img {
-        margin-top: 110px;
+        margin-top: 50px;
         margin-bottom: 24px;
         height: 150px;
         width: 150px;

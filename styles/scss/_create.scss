@@ -26,7 +26,7 @@
     }
 
     .camera-container {
-      border: 1px solid #572ee5;
+      border: 1px solid var(--purpura);
       max-width: 688px;
       height: 390px;
       margin: 24px auto;
@@ -37,7 +37,7 @@
       padding: 20px;
   
       h2 {
-        @include letra(0, $font-montserrat ,#572EE5, 25px, 700, 35px)
+        @include letra(0, $font-montserrat ,var(--purpura), 25px, 700, 35px)
 
       }
 
@@ -46,12 +46,12 @@
      }
   
       p {
-        @include letra(0, $font-roboto , #000000, 16px, 400, 29px)
+        @include letra(0, $font-roboto , var(--negro), 16px, 400, 29px)
       }
   
       div.div-hover-create {
         position: absolute;
-        background-color: #572ee5;
+        background-color: var(--purpura);
         opacity: 0.8;
         z-index: 1;
         display: flex;
@@ -86,16 +86,16 @@
           width: 32px;
           height: 32px;
           border-radius: 32px;
-          border: 1px solid #572ee5;
+          border: 1px solid var(--purpura);
           background: transparent;
-          color: #572ee5;
+          color: var(--purpura);
           margin: 0 13px;
           text-align: center;
           font-size: 18px;
   
           &.activate {
             color: white;
-            background: #572ee5;
+            background: var(--purpura);
           }
         }
         img{
@@ -110,9 +110,9 @@
         max-width: 795px;
         width: 100%;
         margin: 20px auto;
-        border: 1px solid #572ee5;
+        border: 1px solid var(--purpura);
         border-radius: 6.9px;
-        background-color: #572ee5;
+        background-color: var(--purpura);
       }
   
       button {
