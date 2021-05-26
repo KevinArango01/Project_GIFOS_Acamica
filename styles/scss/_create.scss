@@ -3,9 +3,8 @@
 /*********************
 * Create gifos
 **********************/
-
 #create-gifo {
-    margin: 0 2rem;
+    background-color: var(--blanco);
     .div-camara{
       margin-left: 8%;
       height: 100%;
@@ -58,9 +57,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-  
+        
         h2 {
-          color: #ffffff;
+          color: var(--blanco);
           text-align: center;
         }
       }
@@ -79,6 +78,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 135px;
+        height: 30px;
         div.step-icon {
           display: flex;
           align-items: center;
@@ -99,9 +100,9 @@
           }
         }
         img{
-          position: absolute;
-          left: 80%;
-          top: 74%;
+          position: relative;
+          top: 20px;
+          left: 330px;
         }
       }
   

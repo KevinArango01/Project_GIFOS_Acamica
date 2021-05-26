@@ -388,7 +388,7 @@ div.slider-arrow-right {
 }
 
 /*  images*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 930px) {
   .images-container {
     justify-content: center;
     margin: 0 12.5%;
@@ -658,7 +658,7 @@ header nav .menu .layer {
   transform-origin: 3px 0px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 930px) {
   header nav {
     height: 90px;
   }
@@ -901,7 +901,7 @@ header nav .menu .layer {
   height: 15.8px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 930px) {
   .principal h1 {
     margin: 76px 300px 24px 300px;
     display: inline-block;
@@ -1012,7 +1012,7 @@ header nav .menu .layer {
   background-color: var(--barramenu);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 930px) {
   .d-footer {
     display: flex;
     align-items: center;
@@ -1069,7 +1069,7 @@ header nav .menu .layer {
 * Create gifos
 **********************/
 #create-gifo {
-  margin: 0 2rem;
+  background-color: var(--blanco);
 }
 #create-gifo .div-camara {
   margin-left: 8%;
@@ -1128,7 +1128,7 @@ header nav .menu .layer {
   justify-content: center;
 }
 #create-gifo .camera-container div.div-hover-create h2 {
-  color: #ffffff;
+  color: var(--blanco);
   text-align: center;
 }
 #create-gifo .camera-container video {
@@ -1144,6 +1144,8 @@ header nav .menu .layer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 135px;
+  height: 30px;
 }
 #create-gifo .footer-create .create-steps div.step-icon {
   display: flex;
@@ -1164,9 +1166,9 @@ header nav .menu .layer {
   background: var(--purpura);
 }
 #create-gifo .footer-create .create-steps img {
-  position: absolute;
-  left: 80%;
-  top: 74%;
+  position: relative;
+  top: 20px;
+  left: 330px;
 }
 #create-gifo .footer-create span {
   height: 6.9px;
@@ -1419,7 +1421,7 @@ header nav .menu .layer {
   color: #ffffff;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 930px) {
   .dark ul#menu-container {
     background-color: #37383c;
   }

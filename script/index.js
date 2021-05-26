@@ -1,4 +1,3 @@
-
 //Elementos del buscador (input)
 let input_busqueda = document.getElementById('in-busqueda');
 let btn_busqueda = document.getElementById('btn-buscar');
@@ -56,10 +55,10 @@ async function cargarSugerencias() {
 
 //Sugerencias de trending en página inicial
 lista_trending.addEventListener('click', (e) => {
-    param_busqueda = e.target.textContent;
-    restablecerResultados();
-    cargarBusqueda(param_busqueda, offset);
-    restablecerBusqueda();
+   param_busqueda = e.target.textContent;
+   restablecerResultados();
+   cargarBusqueda(param_busqueda, offset);
+   restablecerBusqueda();
 })
 
 async function cargarTrendingSugerencias() {
@@ -71,7 +70,7 @@ async function cargarTrendingSugerencias() {
             let items = `<li>${trendingSugerencias.data[i]}</li>`;
             items_lista = items_lista + items;
         }
-        lista_trending.innerHTML = items_lista;
+        lista_trending.innerHTML = `<li>${items_lista}</li>`;
     }
 }
 
@@ -79,8 +78,8 @@ async function cargarTrendingSugerencias() {
 
 //Selección de sugerencia (li) para la búsqueda de un gif
 lista_sugerencias.addEventListener('click', (e) => {
-    input_busqueda.value = e.target.textContent;
-    ejecutarBusqueda(e.target.textContent);
+  input_busqueda.value = e.target.textContent;
+  ejecutarBusqueda(e.target.textContent);
 })
 
 //Click en la lupa del campo 
