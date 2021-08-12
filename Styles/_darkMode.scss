@@ -1,0 +1,130 @@
+@import 'variable.scss';
+
+.page-container.dark-mode{
+    background: $greyDM;
+    .button-gifo{
+        border-color: $white;
+        color: $white;
+        &:active{
+            background-color: $white;
+            color: $blackTextColor;
+        }
+    }
+    .full-screen-section{
+        background: $greyDM;
+        color: $white;
+    }
+    .header-container{
+        .menu-container{
+            background: $blackTextColor;
+            opacity: 0.9;
+            .menu-item{
+                .menu-item-line{
+                    background-color:  $white;
+                }
+            }
+        }
+    }
+    .search-gifos-container{
+        .title{
+            color: $white;
+        }
+        .search-container{
+            border: 1px solid $white;
+            .search-input{
+                background: $greyDM;
+                color: white;
+            }
+        }
+        .trending-box{
+            color: $white;
+        }
+        .search-without-result-container{
+            .search-without-result-title{
+                color: $white;
+            }
+        }
+        .results-container{
+            .results-title{
+                color: $white;
+            }
+        }
+    }
+    .favorite-gifos-section{
+        .favorite-gifos-title{
+            color: $white;
+        }
+    }
+    .my-gifs-section{
+        .my-gifos-title{
+            color: $white;
+        }
+
+    }
+    .trending-gifos-container{
+        background: #222326;
+        .title-trending-gifos, .content-trending-gifos{
+            color: $white;
+        }
+    }
+    .create-gifos-section{
+        .create-gifos-container{
+            border-color: $white;
+            .create-gifos-container-screen{
+                border-color: $white;
+                .create-gifo-decription-step{
+                    .create-gifo-title{
+                        color: $white;
+                    }
+                    .create-gifo-content{
+                        color: $white;
+                    }
+                }
+            }
+            .create-gifos-container-steps{
+                .step-item{
+                    border-color: $white;
+                    color: $white;
+                }
+                .step-item-selected{
+                    background: $white;
+                    border-color: $white;
+                    color: $blackTextColor;
+                }
+                .timekeeper-item{
+                    color: $white;
+                }
+                .record-again-item{
+                    color: $white;
+                }
+            }
+        }
+    }
+    .footer-gifos{
+        color: $white;
+    }
+}
+@media (min-width: 1024px){
+    .page-container.dark-mode{
+        .header-container{
+            .menu-container{
+                background: $greyDM;
+                .menu-item{
+                    color:  $white;
+                }
+            }
+        }
+        .create-gifos-section{
+            .create-gifos-container{
+                .create-gifos-container-steps{
+                    .record-again-item{
+                        border-color: $greyDM;
+                        &:hover{
+                            border-color: $blueActive;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

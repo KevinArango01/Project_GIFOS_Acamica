@@ -1,0 +1,93 @@
+@import 'variable.scss';
+
+.page-container{
+    .favorite-gifos-section{
+        display: none;
+        margin: auto;
+        margin-top: 5px;
+        padding-bottom: 34px;
+        .favorite-gifos-icon{
+            margin: auto;
+            display: block;
+        }
+        .favorite-gifos-title{
+            margin-top: 7px;
+            @include MonsBold(20px,30px,700);
+            color: $purpleMain;
+        }
+        .favorite-gifos-container{
+            display: none;
+            margin: auto;
+            margin-top: 46px;
+            max-width: 375px;
+        }
+        .without-favorites-container{
+            display: none;
+            margin-top: 60px;
+            .img-without-favs{
+                display: block;
+                margin: auto;
+            }
+            .content-without-favs{
+                margin: auto;
+                margin-top: 20px;
+                width: 250px;
+                @include MonsBold(18px,20px,700);
+                color: $blueActive;
+            }
+        }
+    }
+}
+
+@media (min-width:768px){
+    .page-container{
+        .favorite-gifos-section{
+            .favorite-gifos-container{
+                max-width: 729px;
+            }
+        }
+    }
+}
+
+@media (min-width:1024px){
+    .page-container{
+        .favorite-gifos-section{
+            margin: 11px auto 79px auto;
+            .favorite-gifos-title{
+                margin-top: 8px;
+                @include MonsBold(25px,30px,700);
+                color: $purpleMain;
+            }
+            .favorite-gifos-container{
+                max-width: 896px;
+                margin-top: 36px;
+            }
+            .without-favorites-container{
+                margin-top: 110px;
+                .content-without-favs{
+                    margin-top: 24px;
+                    width: 431px;
+                    @include MonsBold(22px,33px,700);
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1185px){
+    .page-container{
+        .favorite-gifos-section{
+            .favorite-gifos-container{
+                max-width: 1185px;
+            }
+        }
+    }
+}
+@media (min-width: 1185px){
+    .page-container{
+        .favorite-gifos-section{
+            .favorite-gifos-container{
+                max-width: 1185px;
+            }
+        }
+    }
+}

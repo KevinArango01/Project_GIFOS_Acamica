@@ -1,0 +1,30 @@
+$purpleMain: #572EE5;
+$blueActive: #50e3c2;
+$blackTextColor: #000000;
+$white: #FFFFFF;
+$grey: #9CAFC3;
+$greyDM: #37383C;
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+// Fonts
+@mixin MonsBold($size,$height,$weight) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    text-align: center;
+    letter-spacing: 0;
+}
+@mixin robotoReg($size,$height,$weight) {
+    font-family: 'Roboto', sans-serif;
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    text-align: center;
+    letter-spacing: 0;
+}
